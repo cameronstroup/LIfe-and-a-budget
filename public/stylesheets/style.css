@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+/* Navigation Start */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.nav-bar i {
+    font-size: 36px;
+    margin-left: 120px;
+}
+
+.nav-bar h1 {
+    font-size: 56px;
+    width: 50%;
+}
+
+.nav-bar button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: 120px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 25px;
+}
+/* Navigation End */
+
+
+/* Main Body Start */
+.main-body {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.main-left {
+    width: 35%;
+}
+
+.main-left h2 {
+    font-size: 56px;
+}
+
+.main-left p {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 24px;
+    text-align: justify;
+}
+
+.main-left button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 18px;
+    border-radius: 25px;
+}
+
+.main-right {
+    width: 40%;
+}
+/* Main Body End */
+
+.credit {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

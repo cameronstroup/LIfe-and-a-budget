@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: left;
+    margin-top: 25px;
+}
+
+button {
+    width: 100%;
+}
+
+.title {
+    
+    margin-left: 50px;
+}
+
+
+.main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.chart2 {
+    width: 450px;
+    float: right;
+    margin-top: 25px;
+}
+
+.row {
+    margin: 5px;
+    height: 25px;
+}
+
+.container {
+    height: 350px;
+    width: 350px;
+}
