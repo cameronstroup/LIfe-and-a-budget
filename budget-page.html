@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
     <link rel="stylesheet" href="./public/stylesheets/budgetStyle.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"> -->
     <title>Life and a Budget</title>
 </head>
 <body>
@@ -13,41 +15,197 @@
         <h1 class="title">
             ${User's} Budget 
         </h1>
-        <div>
+
+        <div class="topTable">
             <form>
                 <table>
                     <tr>
                         <th>Income</th>
                         <th>Budget</th>
                         <th>Actual</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                     <tr>
-                        <td><input type="text" placeholder="EX. Job" name="income-title" id="income-title" class=""></td>
-                        <td><input type="text" placeholder="EX. 5000" name="income-budget" id="income-budget" class=""></td>
-                        <td><input type="text" placeholder="EX. 7000" name="income-actual" id="income-actual" class=""></td>
+                        <td><input type="text" placeholder="EX. Job" name="income-title" id="income-title" class="row">
+                        <td><input type="text" placeholder="EX. 5000" name="income-budget" id="income-budget" class="row"></td>
+                        <td><input type="text" placeholder="EX. 7000" name="income-actual" id="income-actual" class="row"></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="income-title" id="income-title" class=""></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class=""></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class=""></td>
+                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
+                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
+                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="income-title" id="income-title" class=""></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class=""></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class=""></td>
+                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
+                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
+                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
                     </tr>
                 </table>
             </form>
             <button onclick="saveBtn()" >Save</button>
         </div>
+
+        <div class="chartTop">
+            <canvas id="topChart" width="450" height="150"></canvas>
         </div>
-        <div class="chart1">
-            place for chart 1
+
+        <div class="top-right">
+            <div>
+                Availible to budget
+            </div>
+            <div>
+
+            </div>
         </div>
-        <div class="chart2">
-            place for chart 2
-        </div>
+
     </header>
+
+    <main class="main">
+
+        <section class="bills">
+            <form>
+                <table>
+                    <tr>
+                        <th>Bills</th>
+                        <th>Budget</th>
+                        <th>Actual</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="EX. Job" name="income-title" id="income-title" class="row"></td>
+                        <td><input type="text" placeholder="EX. 5000" name="income-budget" id="income-budget" class="row"></td>
+                        <td><input type="text" placeholder="EX. 7000" name="income-actual" id="income-actual" class="row"></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
+                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
+                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
+                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
+                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
+                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
+                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
+                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
+                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
+                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
+                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
+                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
+                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                </table>
+            </form>
+            <button>Save</button>
+        </section>
+
+        <section class="savings">
+            <form>
+                <table>
+                    <tr>
+                        <th>Savings</th>
+                        <th>Budget</th>
+                        <th>Actual</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="EX. Job" name="income-title" id="income-title" class=""></td>
+                        <td><input type="text" placeholder="EX. 5000" name="income-budget" id="income-budget" class=""></td>
+                        <td><input type="text" placeholder="EX. 7000" name="income-actual" id="income-actual" class=""></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="income-title" id="income-title" class=""></td>
+                        <td><input type="text" name="income-budget" id="income-budget" class=""></td>
+                        <td><input type="text" name="income-actual" id="income-actual" class=""></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="income-title" id="income-title" class=""></td>
+                        <td><input type="text" name="income-budget" id="income-budget" class=""></td>
+                        <td><input type="text" name="income-actual" id="income-actual" class=""></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="income-title" id="income-title" class=""></td>
+                        <td><input type="text" name="income-budget" id="income-budget" class=""></td>
+                        <td><input type="text" name="income-actual" id="income-actual" class=""></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="income-title" id="income-title" class=""></td>
+                        <td><input type="text" name="income-budget" id="income-budget" class=""></td>
+                        <td><input type="text" name="income-actual" id="income-actual" class=""></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="income-title" id="income-title" class=""></td>
+                        <td><input type="text" name="income-budget" id="income-budget" class=""></td>
+                        <td><input type="text" name="income-actual" id="income-actual" class=""></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="income-title" id="income-title" class=""></td>
+                        <td><input type="text" name="income-budget" id="income-budget" class=""></td>
+                        <td><input type="text" name="income-actual" id="income-actual" class=""></td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                </table>
+            </form>
+            <button>Save</button>
+        </section>
+
+        <section class="container">
+            <canvas id="chart1"></canvas>
+        </section>
+
+    </main>
+
+    <section class="chart2">
+        <canvas id="chart2"></canvas>
+    </section>
     
 
     <script src="public/javascript/login.js"></script>
