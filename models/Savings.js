@@ -8,6 +8,11 @@ class Savings extends Model {}
 
 Savings.init(
  {
+   id: {
+     type: DataTypes.INTEGER,
+     primaryKey: true,
+     autoIncrement: true
+   },
    title: {
      type: DataTypes.STRING,
      allowNull: false
@@ -17,7 +22,7 @@ Savings.init(
     allowNull: false
    },
    Actual: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.DECIMAL(10,2),
     allowNull: false
    },
   },
