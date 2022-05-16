@@ -3,7 +3,7 @@ const { Income } = require('../models');
 const incomedata = [
     {
         title: 'Job',
-        Budget: 600,
+        Budget: 3300,
         Actual: 594.33
     },
     {
@@ -15,6 +15,11 @@ const incomedata = [
         title: 'Real Estate',
         Budget: 300,
         Actual: 320.50
+    },
+    {
+        title: 'Side Projects',
+        Budget: 100,
+        Actual: 102.58
     }
 ]
 

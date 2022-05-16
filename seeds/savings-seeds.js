@@ -15,6 +15,16 @@ const savingsdata = [
         title: 'Real Estate Property',
         Budget: 500,
         Actual: 456.50
+    },
+    {
+        title: 'HSA',
+        Budget: 50,
+        Actual: 50.00
+    },
+    {
+        title: 'Roth IRA',
+        Budget: 300,
+        Actual: 275.00
     }
 ]
 

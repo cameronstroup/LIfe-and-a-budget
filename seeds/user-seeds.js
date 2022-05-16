@@ -11,6 +11,11 @@ const userdata = [
         username: 'Test2',
         email: 'test2@email.com',
         password: 'password'
+    },
+    {
+        username: 'Test3',
+        email: 'test3@email.com',
+        password: 'password'
     }
 ]
 
