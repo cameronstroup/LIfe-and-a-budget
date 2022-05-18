@@ -3,7 +3,7 @@
             ${User's} Budget 
         </h1>
         
-    <div>
+    {{!-- <div>
         {{#each income}}
         <p> {{ title }} {{ Budget }} {{ Actual }} </p>
         {{/each}}
@@ -13,7 +13,7 @@
         {{#each expense}}
         <p> {{ title }} {{ Budget }} {{ Actual }} </p>
         {{/each}}
-    </div>
+    </div> --}}
 
         {{!-- <div class="topTable">
             <form>
@@ -83,11 +83,13 @@
                     </tr>
                     {{#each expense}}
                     <tr>
-                        <td>{{ title }}</td>
-                        <td>{{ Budget }}</td>
-                        <td>{{ Actual }}</td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
+                        <form class="expenses-form" id="{{ id }}">
+                        <td><input type="text" value="{{ title }}" id="expenses-title_{{ id }}"></td>
+                        <td><input type="text" value="{{ Budget }}" id="expenses-budget_{{ id }}"></td>
+                        <td><input type="text" value="{{ Actual }}" id="expenses-actual_{{ id }}"></td>
+                        <td><button type="submit">Edit</button></td>
+                        </form>
+                        <td><button class="delete-btn" id="{{ id }}_delete">Delete</button></td>
                     </tr>
                     {{/each}}
                     <tr>
@@ -213,3 +215,5 @@
     
 
     <script src="/javascript/budget-page.js"></script>
+    <script src="/javascript/delete-budget-row.js"></script>
+    <script src="/javascript/edit-budget-row.js"></script>
