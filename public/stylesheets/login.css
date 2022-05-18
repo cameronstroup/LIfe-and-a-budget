@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /* background: THIS is where a picture will be placed , probaly an imagae of our main page  */
+    background-size: cover;
+  }
+  .loginContainer {
+    width: 310px;
+    padding: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(211, 91, 91, 0.308);
+    text-align: center;
+  }
+  .loginContainer h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 720;
+  }
+  .loginContainer input[type="text"],
+  .loginContainer input[type="password"] {
+    border: 0;
+    width: 220px;
+    display: block;
+    border: 3px solid #0367fd;
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+    padding: 14px 10px;
+    outline: none;
+    background: none;
+    border-radius: 24px;
+    transition: 0.25px;
+  }
+  
+  .loginContainer input[type="text"]:focus,
+  .loginContainer input[type="password"]:focus {
+    border-color: #ffc400ec;
+    width: 270px;
+  }
+  .loginContainer input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    text-align: center;
+    padding: 14px 35px;
+    margin: 20px auto;
+    border: 3px solid #a200ffec;
+    outline: none;
+    color: rgba(255, 255, 255, 0.384);
+    transition: 0.25px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  .loginContainer input[type="submit"]:hover {
+    background: #3cff00ec;
+  }
