@@ -5,7 +5,13 @@
         
     <div>
         {{#each income}}
-        <p> {{ title }} {{ Budget }} </p>
+        <p> {{ title }} {{ Budget }} {{ Actual }} </p>
+        {{/each}}
+    </div>
+
+    <div>
+        {{#each expense}}
+        <p> {{ title }} {{ Budget }} {{ Actual }} </p>
         {{/each}}
     </div>
 
@@ -75,13 +81,15 @@
                         <th class="edit">Edit</th>
                         <th class="delete">Delete</th>
                     </tr>
+                    {{#each expense}}
                     <tr>
-                        <td><input type="text" placeholder="EX. Job" name="income-title" id="income-title" class="row"></td>
-                        <td><input type="text" placeholder="EX. 5000" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" placeholder="EX. 7000" name="income-actual" id="income-actual" class="row"></td>
+                        <td>{{ title }}</td>
+                        <td>{{ Budget }}</td>
+                        <td>{{ Actual }}</td>
                         <td><button>Edit</button></td>
                         <td><button>Delete</button></td>
                     </tr>
+                    {{/each}}
                     <tr>
                         <td><input type="text" name="income-title" id="income-title" class="row"></td>
                         <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
