@@ -2,9 +2,11 @@
         <h1 class="title">
             ${User's} Budget 
         </h1>
-
+        
     <div>
-        <p> {{ income }} </p>
+        {{#each income}}
+        <p> {{ title }} {{ Budget }} </p>
+        {{/each}}
     </div>
 
         {{!-- <div class="topTable">
