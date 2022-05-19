@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
 const { Income, Expenses, Savings } = require('../models');
 
 router.get('/', (req, res) => {
@@ -32,6 +31,7 @@ router.get('/budget', async (req, res) => {
     let mappedSavings = savingsData.map((savingsData) => {
       return savingsData.dataValues
     })
+    console.log(mappedIncome)
 
     res.render('budget', { 
       income: mappedIncome,

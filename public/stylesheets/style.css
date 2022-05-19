@@ -1,7 +1,14 @@
+/* font-family: 'Mukta', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mukta', sans-serif;
 }
 
 a {
@@ -16,34 +23,36 @@ li {
 /* Navigation Start */
 .nav-bar {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     margin-top: 25px;
     margin-bottom: 25px;
     text-align: center;
-    padding-bottom: 50px;
-}
-
-.nav-bar i {
-    font-size: 36px;
-    margin-left: 120px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .nav-bar h1 {
-    font-size: 56px;
-    width: 50%;
+    font-size: 48px;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 300;
+}
+
+.nav-bar h1 span {
+    font-weight: 600;
 }
 
 .nav-bar button {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin-right: 120px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
     text-align: center;
     font-size: 24px;
-    border-radius: 25px;
+    border-radius: 50px;
+    border: none;
 }
 /* Navigation End */
 
@@ -52,38 +61,47 @@ li {
 .main-body {
     margin-top: 150px;
     display: flex;
-    align-items: center;
     justify-content: space-around;
     width: 100%;
 }
 
-.main-left {
-    width: 35%;
+.container {
+    width: 50%;
 }
 
-.main-left h2 {
-    font-size: 56px;
+.container h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
-.main-left p {
+
+.container h2 {
     padding-top: 10px;
     padding-bottom: 20px;
     font-size: 24px;
     text-align: justify;
+    font-weight: 400;
 }
 
-.main-left button {
-    padding-top: 20px;
-    padding-bottom: 20px;
+.container h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.container span {
+    font-style: italic;
+}
+
+.container button {
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 50px;
     padding-right: 50px;
     font-size: 18px;
     border-radius: 25px;
+    border: none;
 }
 
-.main-right {
-    width: 40%;
-}
 /* Main Body End */
 
 .credit {

@@ -8,6 +8,7 @@ const chart2 = document.getElementById('chart2').getContext('2d');
 // Chart.defaults.global.defaultFontColor = 'grey';
 
 let massPopChart = new Chart(chart1, {
+
     type: 'pie',
     data:{
         labels:['Budget', 'Actual'],
