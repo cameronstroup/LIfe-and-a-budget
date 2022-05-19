@@ -1,4 +1,4 @@
-async function deleteRow(event) {
+async function deleteBudgetRow(event) {
     event.preventDefault();
 
     const id = parseInt(this.id);
@@ -15,4 +15,4 @@ async function deleteRow(event) {
     }
 }
 
-document.querySelectorAll('.delete-expenses-btn').forEach(element => element.addEventListener('click', deleteRow));
+document.querySelectorAll('.delete-expenses-btn').forEach(element => element.addEventListener('click', deleteBudgetRow));
