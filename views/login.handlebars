@@ -2,14 +2,14 @@
     <div class="main">
       <input type="checkbox" id="cam" aria-hidden="true" />
 
-      <div class=" login-form signup">
+      <div class=" signup-form signup">
         <form>
           <label for="cam" aria-hidden="true">Sign up</label>
-          <input type="text" id="email-login"  name="txt" placeholder="User name" required="" />
-          <input type="email" name="email" placeholder="Email" required="" />
+          <input type="text" id="username-signup"  placeholder="User name" required="" />
+          <input type="email" id="email-signup" placeholder="Email" required="" />
           <input
             type="password"
-            id="password-login"
+            id="password-signup"
             name="pswd"
             placeholder="Password"
             required=""
@@ -18,12 +18,13 @@
         </form>
       </div>
 
-      <div class="login">
+      <div class=" login-form login">
         <form>
           <label for= "cam" aria-hidden="true">Login</label>
-          <input type="email" name="email" placeholder="Email" required="" />
+          <input type="email" id="email-login" placeholder="Email" required="" />
           <input
             type="password"
+            id="password-login"
             name="pswd"
             placeholder="Password"
             required=""
@@ -34,3 +35,5 @@
     </div>
   </body>
 </html>
+
+<script src="/javascript/login.js"></script>
