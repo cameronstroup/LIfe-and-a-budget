@@ -15,4 +15,4 @@ async function deleteRow(event) {
     }
 }
 
-document.querySelectorAll('.delete-btn').forEach(element => element.addEventListener('click', deleteRow));
+document.querySelectorAll('.delete-expenses-btn').forEach(element => element.addEventListener('click', deleteRow));
