@@ -74,10 +74,10 @@
                     {{#each expense}}
                     <tr>
                         <form class="expenses-form" id="{{ id }}">
-                        <td><input type="text" value="{{ title }}" id="expenses-title_{{ id }}"></td>
-                        <td><input type="text" value="{{ Budget }}" id="expenses-budget_{{ id }}"></td>
-                        <td><input type="text" value="{{ Actual }}" id="expenses-actual_{{ id }}"></td>
-                        <td><button type="submit">Save</button></td>
+                            <td><input type="text" value="{{ title }}" id="expenses-title_{{ id }}"></td>
+                            <td><input type="text" value="{{ Budget }}" id="expenses-budget_{{ id }}"></td>
+                            <td><input type="text" value="{{ Actual }}" id="expenses-actual_{{ id }}"></td>
+                            <td><button>Save</button></td>
                         </form>
                         <td><button class="delete-expenses-btn" id="{{ id }}_delete">Delete</button></td>
                     </tr>
@@ -99,10 +99,10 @@
                     </tr>
                     {{#each savings}}
                     <tr>
-                        <form class="expenses-form" id="{{ id }}">
-                        <td><input type="text" value="{{ title }}" id="expenses-title_{{ id }}"></td>
-                        <td><input type="text" value="{{ Budget }}" id="expenses-budget_{{ id }}"></td>
-                        <td><input type="text" value="{{ Actual }}" id="expenses-actual_{{ id }}"></td>
+                        <form class="income-form" id="{{ id }}">
+                        <td><input type="text" value="{{ title }}" id="income-title_{{ id }}"></td>
+                        <td><input type="text" value="{{ Budget }}" id="income-budget_{{ id }}"></td>
+                        <td><input type="text" value="{{ Actual }}" id="income-actual_{{ id }}"></td>
                         <td><button type="submit">Save</button></td>
                         </form>
                         <td><button class="delete-savings-btn" id="{{ id }}_delete">Delete</button></td>
@@ -127,3 +127,4 @@
     <script src="/javascript/budget-page.js"></script>
     <script src="/javascript/delete-budget-row.js"></script>
     <script src="/javascript/edit-budget-row.js"></script>
+    <script src="/javascript/delete-income-row.js"></script>
