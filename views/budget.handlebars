@@ -1,21 +1,25 @@
-<header>
+<nav class="columns">
+  <div class="column">
+    <h1>Life & a Budget</h1>
+  </div>
+  <div class="column">
+    <h1>
+      logout
+    </h1>
+  </div>
+</nav>
+
+<header class="columns">
+  <div class="column">
   <h1 class="title">
     ${User's} Budget
   </h1>
+  </div>
+</header>
 
-  {{!-- <div>
-        {{#each income}}
-        <p> {{ title }} {{ Budget }} {{ Actual }} </p>
-        {{/each}}
-    </div>
-
-    <div>
-        {{#each expense}}
-        <p> {{ title }} {{ Budget }} {{ Actual }} </p>
-        {{/each}}
-    </div> --}}
-
-  <div class="topTable">
+<section class="columns">
+  <div class="column">
+    <div class="topTable">
     <form>
       <table>
         <tr class="header">
@@ -75,18 +79,16 @@
     </form>
     <button id="new-income-btn">Add Row</button>
   </div>
-
-  <div class="chartTop">
+  </div>
+  <div class="column">
+    <div class="chartTop">
     <canvas id="topChart" width="450" height="150"></canvas>
   </div>
+  </div>
+</section>
+
 
   <div class="top-right">
-    <div>
-      Availible to budget
-    </div>
-    <div>
-      Availible to spend
-    </div>
     <div>
       <a href="/login">
         <button
