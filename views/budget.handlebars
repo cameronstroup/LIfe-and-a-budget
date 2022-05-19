@@ -15,41 +15,31 @@
         {{/each}}
     </div> --}}
 
-        {{!-- <div class="topTable">
+        <div class="topTable">
             <form>
                 <table>
                     <tr class="header">
                         <th>Income</th>
                         <th>Budget</th>
                         <th>Actual</th>
-                        <th class="edit">Edit</th>
+                        <th class="edit">Save</th>
                         <th class="delete">Delete</th>
                     </tr>
+                    {{#each income}}
                     <tr>
-                        <td><input type="text" placeholder="EX. Job" name="income-title" id="income-title" class="row">
-                        <td><input type="text" placeholder="EX. 5000" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" placeholder="EX. 7000" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
+                        <form class="expenses-form" id="{{ id }}">
+                        <td><input type="text" value="{{ title }}" id="expenses-title_{{ id }}"></td>
+                        <td><input type="text" value="{{ Budget }}" id="expenses-budget_{{ id }}"></td>
+                        <td><input type="text" value="{{ Actual }}" id="expenses-actual_{{ id }}"></td>
+                        <td><button type="submit">Save</button></td>
+                        </form>
+                        <td><button class="delete-income-btn" id="{{ id }}_delete">Delete</button></td>
                     </tr>
-                    <tr>
-                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
+                    {{/each}}
                 </table>
             </form>
-            <button>Save</button>
-        </div> --}}
+            <button>Add Row</button>
+        </div>
 
         <div class="chartTop">
             <canvas id="topChart" width="450" height="150"></canvas>
@@ -78,7 +68,7 @@
                         <th>Bills</th>
                         <th>Budget</th>
                         <th>Actual</th>
-                        <th class="edit">Edit</th>
+                        <th class="edit">Save</th>
                         <th class="delete">Delete</th>
                     </tr>
                     {{#each expense}}
@@ -87,56 +77,14 @@
                         <td><input type="text" value="{{ title }}" id="expenses-title_{{ id }}"></td>
                         <td><input type="text" value="{{ Budget }}" id="expenses-budget_{{ id }}"></td>
                         <td><input type="text" value="{{ Actual }}" id="expenses-actual_{{ id }}"></td>
-                        <td><button type="submit">Edit</button></td>
+                        <td><button type="submit">Save</button></td>
                         </form>
-                        <td><button class="delete-btn" id="{{ id }}_delete">Delete</button></td>
+                        <td><button class="delete-expenses-btn" id="{{ id }}_delete">Delete</button></td>
                     </tr>
                     {{/each}}
-                    <tr>
-                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
                 </table>
             </form>
-            <button>Save</button>
+            <button>Add Row</button>
         </section>
 
         <section class="savings">
@@ -146,63 +94,23 @@
                         <th>Savings</th>
                         <th>Budget</th>
                         <th>Actual</th>
-                        <th class="edit">Edit</th>
+                        <th class="edit">Save</th>
                         <th class="delete">Delete</th>
                     </tr>
-                    {{#each saving}}
+                    {{#each savings}}
                     <tr>
-                        <td>{{ title }}</td>
-                        <td><input type="text" placeholder="EX. 5000" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" placeholder="EX. 7000" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
+                        <form class="expenses-form" id="{{ id }}">
+                        <td><input type="text" value="{{ title }}" id="expenses-title_{{ id }}"></td>
+                        <td><input type="text" value="{{ Budget }}" id="expenses-budget_{{ id }}"></td>
+                        <td><input type="text" value="{{ Actual }}" id="expenses-actual_{{ id }}"></td>
+                        <td><button type="submit">Save</button></td>
+                        </form>
+                        <td><button class="delete-savings-btn" id="{{ id }}_delete">Delete</button></td>
                     </tr>
                     {{/each}}
-                    <tr>
-                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="income-title" id="income-title" class="row"></td>
-                        <td><input type="text" name="income-budget" id="income-budget" class="row"></td>
-                        <td><input type="text" name="income-actual" id="income-actual" class="row"></td>
-                        <td><button>Edit</button></td>
-                        <td><button>Delete</button></td>
-                    </tr>
                 </table>
             </form>
-            <button>Save</button>
+            <button>Add Row</button>
         </section>
 
         <section class="chart1">
