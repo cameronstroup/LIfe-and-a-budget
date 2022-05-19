@@ -1,8 +1,7 @@
 async function editExpensesRow(event) {
     event.preventDefault();
 
-    const id = this.id;
-    console.log(id);
+    const id = parseInt(this.id);
 
     const title = document.querySelector('#expenses-title_'+`${id}`).value.trim();
     const Budget = parseInt(document.querySelector('#expenses-budget_'+`${id}`).value);
@@ -28,4 +27,4 @@ async function editExpensesRow(event) {
     }
 }
 
-document.querySelectorAll('.expenses-form').forEach(element => element.addEventListener('submit', editExpensesRow));
+document.querySelectorAll('.save-expenses-btn').forEach(element => element.addEventListener('click', editExpensesRow));

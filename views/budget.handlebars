@@ -27,18 +27,23 @@
                     </tr>
                     {{#each income}}
                     <tr>
-                        <form class="expenses-form" id="{{ id }}">
-                        <td><input type="text" value="{{ title }}" id="expenses-title_{{ id }}"></td>
-                        <td><input type="text" value="{{ Budget }}" id="expenses-budget_{{ id }}"></td>
-                        <td><input type="text" value="{{ Actual }}" id="expenses-actual_{{ id }}"></td>
-                        <td><button type="submit">Save</button></td>
-                        </form>
-                        <td><button class="delete-income-btn" id="{{ id }}_delete">Delete</button></td>
+                        {{!-- <form class="income-form" id="{{ id }}_income"> --}}
+                            <td><input type="text" value="{{ title }}" id="income-title_{{ id }}"></td>
+                            <td><input type="text" value="{{ Budget }}" id="income-budget_{{ id }}"></td>
+                            <td><input type="text" value="{{ Actual }}" id="income-actual_{{ id }}"></td>
+                            <td><button class="save-income-btn" id="{{ id }}_income-save">Save</button></td>
+                        {{!-- </form> --}}
+                        <td><button class="delete-income-btn" id="{{ id }}_delete-income">Delete</button></td>
                     </tr>
                     {{/each}}
+                    <tr>
+                        <td><input type="text" placeholder="EX Income" id="new-income-title"></td>
+                        <td><input type="text" placeholder="EX 300" id="new-income-budget"></td>
+                        <td><input type="text" placeholder="EX 302.49" id="new-income-actual"></td>
+                    </tr>
                 </table>
             </form>
-            <button>Add Row</button>
+            <button id="new-income-btn">Add Row</button>
         </div>
 
         <div class="chartTop">
@@ -73,18 +78,23 @@
                     </tr>
                     {{#each expense}}
                     <tr>
-                        <form class="expenses-form" id="{{ id }}">
+                        {{!-- <form class="expenses-form" id="{{ id }}_expenses"> --}}
                             <td><input type="text" value="{{ title }}" id="expenses-title_{{ id }}"></td>
                             <td><input type="text" value="{{ Budget }}" id="expenses-budget_{{ id }}"></td>
                             <td><input type="text" value="{{ Actual }}" id="expenses-actual_{{ id }}"></td>
-                            <td><button>Save</button></td>
-                        </form>
-                        <td><button class="delete-expenses-btn" id="{{ id }}_delete">Delete</button></td>
+                            <td><button class="save-expenses-btn" id="{{ id }}_expenses-save">Save</button></td>
+                        {{!-- </form> --}}
+                        <td><button class="delete-expenses-btn" id="{{ id }}_delete-expenses">Delete</button></td>
                     </tr>
                     {{/each}}
+                    <tr>
+                        <td><input type="text" placeholder="EX Expense" id="new-expense-title"></td>
+                        <td><input type="text" placeholder="EX 300" id="new-expense-budget"></td>
+                        <td><input type="text" placeholder="EX 302.49" id="new-expense-actual"></td>
+                    </tr>
                 </table>
             </form>
-            <button>Add Row</button>
+            <button id="new-expenses-btn">Add Row</button>
         </section>
 
         <section class="savings">
@@ -99,18 +109,23 @@
                     </tr>
                     {{#each savings}}
                     <tr>
-                        <form class="income-form" id="{{ id }}">
-                        <td><input type="text" value="{{ title }}" id="income-title_{{ id }}"></td>
-                        <td><input type="text" value="{{ Budget }}" id="income-budget_{{ id }}"></td>
-                        <td><input type="text" value="{{ Actual }}" id="income-actual_{{ id }}"></td>
-                        <td><button type="submit">Save</button></td>
-                        </form>
-                        <td><button class="delete-savings-btn" id="{{ id }}_delete">Delete</button></td>
+                        {{!-- <form class="savings-form" id="{{ id }}_savings"> --}}
+                            <td><input type="text" value="{{ title }}" id="savings-title_{{ id }}"></td>
+                            <td><input type="text" value="{{ Budget }}" id="savings-budget_{{ id }}"></td>
+                            <td><input type="text" value="{{ Actual }}" id="savings-actual_{{ id }}"></td>
+                            <td><button class="save-savings-btn" id="{{ id }}_savings-save">Save</button></td>
+                        {{!-- </form> --}}
+                        <td><button class="delete-savings-btn" id="{{ id }}_delete-savings">Delete</button></td>
                     </tr>
                     {{/each}}
+                    <tr>
+                        <td><input type="text" placeholder="EX Savings" id="new-savings-title"></td>
+                        <td><input type="text" placeholder="EX 300" id="new-savings-budget"></td>
+                        <td><input type="text" placeholder="EX 302.49" id="new-savings-actual"></td>
+                    </tr>
                 </table>
             </form>
-            <button>Add Row</button>
+            <button id="new-savings-btn">Add Row</button>
         </section>
 
         <section class="chart1">
@@ -125,6 +140,12 @@
     
 
     <script src="/javascript/budget-page.js"></script>
+    <script src="/javascript/add-budget-row.js"></script>
     <script src="/javascript/delete-budget-row.js"></script>
     <script src="/javascript/edit-budget-row.js"></script>
+    <script src="/javascript/add-income-row.js"></script>
     <script src="/javascript/delete-income-row.js"></script>
+    <script src="/javascript/edit-income-row.js"></script>
+    <script src="/javascript/add-savings-row.js"></script>
+    <script src="/javascript/delete-savings-row.js"></script>
+    <script src="/javascript/edit-savings-row.js"></script>

@@ -1,7 +1,7 @@
 async function editIncomeRow(event) {
     event.preventDefault();
 
-    const id = this.id;
+    const id = parseInt(this.id);
 
     const title = document.querySelector('#income-title_'+`${id}`).value.trim();
     const Budget = parseInt(document.querySelector('#income-budget_'+`${id}`).value);
@@ -27,4 +27,4 @@ async function editIncomeRow(event) {
     }
 }
 
-document.querySelectorAll('.income-form').forEach(element => element.addEventListener('submit', editIncomeRow));
+document.querySelectorAll('.save-income-btn').forEach(element => element.addEventListener('click', editIncomeRow));
