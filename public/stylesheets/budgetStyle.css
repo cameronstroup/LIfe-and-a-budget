@@ -12,7 +12,7 @@ body {
     background: linear-gradient(to bottom, #1f1b42, #46408f, #37375f);
 }
 
-header {
+/* header {
     display: flex;
     justify-content: left;
     margin-top: 25px;
@@ -21,21 +21,19 @@ header {
 
 button {
     width: 100%;
-}
+} */
 
 
 .title {
-    padding-right: 30px;
-    margin-left: 50px;
-    padding-top: 50px;
+    font-family: ;
 }
 
 
-.main {
+/* .main {
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
-}
+} */
 
 .bills {
     height: auto;
@@ -45,7 +43,7 @@ button {
     box-shadow: 5px 20px 70px #000;
 }
 
-.header {
+/* .header {
     background-color: cadetblue;
     height: 30px;
     font-size: larger;
@@ -78,4 +76,4 @@ button {
 .container {
     height: 350px;
     width: 350px;
-}
+} */
