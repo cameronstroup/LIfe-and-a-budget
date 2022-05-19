@@ -1,92 +1,8 @@
-<header>
-  <h1 class="title">
-    ${User's} Budget
-  </h1>
-
-  {{!-- <div>
-        {{#each income}}
-        <p> {{ title }} {{ Budget }} {{ Actual }} </p>
-        {{/each}}
-    </div>
-
-    <div>
-        {{#each expense}}
-        <p> {{ title }} {{ Budget }} {{ Actual }} </p>
-        {{/each}}
-    </div> --}}
-
-  <div class="topTable">
-    <form>
-      <table>
-        <tr class="header">
-          <th>Income</th>
-          <th>Budget</th>
-          <th>Actual</th>
-          <th class="edit">Save</th>
-          <th class="delete">Delete</th>
-        </tr>
-        {{#each income}}
-          <tr>
-            {{!-- <form class="income-form" id="{{ id }}_income"> --}}
-            <td><input
-                type="text"
-                value="{{title}}"
-                id="income-title_{{id}}"
-              /></td>
-            <td><input
-                type="text"
-                value="{{Budget}}"
-                id="income-budget_{{id}}"
-              /></td>
-            <td><input
-                type="text"
-                value="{{Actual}}"
-                id="income-actual_{{id}}"
-              /></td>
-            <td><button
-                class="save-income-btn"
-                id="{{id}}_income-save"
-              >Save</button></td>
-            {{! </form> }}
-            <td><button
-                class="delete-income-btn"
-                id="{{id}}_delete-income"
-              >Delete</button></td>
-          </tr>
-        {{/each}}
-        <tr>
-          <td><input
-              type="text"
-              placeholder="EX Income"
-              id="new-income-title"
-            /></td>
-          <td><input
-              type="text"
-              placeholder="EX 300"
-              id="new-income-budget"
-            /></td>
-          <td><input
-              type="text"
-              placeholder="EX 302.49"
-              id="new-income-actual"
-            /></td>
-        </tr>
-      </table>
-    </form>
-    <button id="new-income-btn">Add Row</button>
+<nav class="columns bills">
+  <div class="column">
+    <h1>Life <span>&</span> a Budget</h1>
   </div>
-
-  <div class="chartTop">
-    <canvas id="topChart" width="450" height="150"></canvas>
-  </div>
-
-  <div class="top-right">
-    <div>
-      Availible to budget
-    </div>
-    <div>
-      Availible to spend
-    </div>
+  <div class="column">
     <div>
       <a href="/login">
         <button
@@ -97,62 +13,161 @@
       </a>
     </div>
   </div>
+</nav>
 
+<header class="columns bills">
+  <div class="column">
+  <h1 class="title has-text-centered">
+    Monthly Budget
+  </h1>
+  </div>
 </header>
 
-<main class="main">
+<section class="columns">
 
-  <section class="bills">
+  
+  <div class="column is-three-fifths income">
+    <div class="topTable">
     <form>
-      <table>
+      <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+        <tr class="header">
+          <th>Income</th>
+          <th>Budget</th>
+          <th>Actual</th>
+          <th>Save</th>
+          <th>Delete</th>
+        </tr>
+        {{#each income}}
+          <tr>
+            {{!-- <form class="income-form" id="{{ id }}_income"> --}}
+            <td><input
+                class="input"
+                type="text"
+                value="{{title}}"
+                id="income-title_{{id}}"
+              /></td>
+            <td><input
+                class="input"
+                type="text"
+                value="{{Budget}}"
+                id="income-budget_{{id}}"
+              /></td>
+            <td><input
+                class="input"
+                type="text"
+                value="{{Actual}}"
+                id="income-actual_{{id}}"
+              /></td>
+            <td><button
+                class="save-income-btn button is-fullwidth is-success is-light"
+                id="{{id}}_income-save"
+              >Save</button></td>
+            {{! </form> }}
+            <td><button
+                class="delete-income-btn button is-fullwidth is-danger is-light"
+                id="{{id}}_delete-income"
+              >Delete</button></td>
+          </tr>
+        {{/each}}
+        <tr>
+          <td><input
+              class="input"
+              type="text"
+              placeholder="EX Income"
+              id="new-income-title"
+            /></td>
+          <td><input
+              class="input"
+              type="text"
+              placeholder="EX 300"
+              id="new-income-budget"
+            /></td>
+          <td><input
+              class="input"
+              type="text"
+              placeholder="EX 302.49"
+              id="new-income-actual"
+            /></td>
+        </tr>
+      </table>
+    </form>
+    <button class="button is-fullwidth is-primary is-light" id="new-income-btn">Add Row</button>
+  </div>
+  </div>
+
+
+  <div class="column">
+    <div class="chartTop bills">
+      <canvas id="topChart" width="450" height="150"></canvas>
+    </div>
+  </div>
+
+
+</section>
+
+{{!-- ========================================================================================= --}}
+
+
+<section class="columns">
+
+
+  <div class="column is-three-fifths expenses">
+    <form>
+      <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <tr class="header">
           <th>Bills</th>
           <th>Budget</th>
           <th>Actual</th>
-          <th class="edit">Save</th>
-          <th class="delete">Delete</th>
+          <th>Save</th>
+          <th>Delete</th>
         </tr>
         {{#each expense}}
           <tr>
             {{!-- <form class="expenses-form" id="{{ id }}_expenses"> --}}
             <td><input
+                class="input"
                 type="text"
                 value="{{title}}"
                 id="expenses-title_{{id}}"
               /></td>
             <td><input
+                class="input"
                 type="text"
                 value="{{Budget}}"
                 id="expenses-budget_{{id}}"
               /></td>
             <td><input
+                class="input"
                 type="text"
                 value="{{Actual}}"
                 id="expenses-actual_{{id}}"
               /></td>
             <td><button
-                class="save-expenses-btn"
+                class="save-expenses-btn button is-fullwidth is-success is-light"
                 id="{{id}}_expenses-save"
               >Save</button></td>
             {{! </form> }}
             <td><button
-                class="delete-expenses-btn"
+                class="delete-expenses-btn button is-fullwidth is-danger is-light"
                 id="{{id}}_delete-expenses"
               >Delete</button></td>
           </tr>
         {{/each}}
         <tr>
           <td><input
+              class="input"
               type="text"
               placeholder="EX Expense"
               id="new-expense-title"
             /></td>
           <td><input
+              class="input"
               type="text"
               placeholder="EX 300"
               id="new-expense-budget"
             /></td>
           <td><input
+              class="input"
               type="text"
               placeholder="EX 302.49"
               id="new-expense-actual"
@@ -160,60 +175,80 @@
         </tr>
       </table>
     </form>
-    <button id="new-expenses-btn">Add Row</button>
-  </section>
+    <button class="button is-fullwidth is-primary is-light" id="new-expenses-btn">Add Row</button>
+  </div>
 
-  <section class="savings">
+
+  <div class="column bills">
+    <canvas id="chart1"></canvas>
+  </div>
+
+
+</section>
+
+{{!-- ================================================================================== --}}
+
+
+<section class="columns">
+
+
+  <div class="column is-three-fifths savings">
     <form>
-      <table>
+      <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <tr class="header">
           <th>Savings</th>
           <th>Budget</th>
           <th>Actual</th>
-          <th class="edit">Save</th>
-          <th class="delete">Delete</th>
+          <th>Save</th>
+          <th>Delete</th>
         </tr>
         {{#each savings}}
           <tr>
             {{!-- <form class="savings-form" id="{{ id }}_savings"> --}}
             <td><input
+                class="input"
                 type="text"
                 value="{{title}}"
                 id="savings-title_{{id}}"
               /></td>
             <td><input
+                class="input"
                 type="text"
                 value="{{Budget}}"
                 id="savings-budget_{{id}}"
               /></td>
             <td><input
+                class="input"
                 type="text"
                 value="{{Actual}}"
                 id="savings-actual_{{id}}"
               /></td>
             <td><button
-                class="save-savings-btn"
+                class="save-savings-btn button is-fullwidth is-success is-light"
                 id="{{id}}_savings-save"
               >Save</button></td>
             {{! </form> }}
             <td><button
-                class="delete-savings-btn"
+                class="delete-savings-btn button is-fullwidth is-danger is-light"
                 id="{{id}}_delete-savings"
               >Delete</button></td>
           </tr>
         {{/each}}
         <tr>
           <td><input
+              class="input"
               type="text"
               placeholder="EX Savings"
               id="new-savings-title"
             /></td>
           <td><input
+              class="input"
               type="text"
               placeholder="EX 300"
               id="new-savings-budget"
             /></td>
           <td><input
+              class="input"
               type="text"
               placeholder="EX 302.49"
               id="new-savings-actual"
@@ -221,18 +256,31 @@
         </tr>
       </table>
     </form>
-    <button id="new-savings-btn">Add Row</button>
-  </section>
+    <button class="button is-fullwidth is-primary is-light" id="new-savings-btn">Add Row</button>
+  </div>
 
-  <section class="chart1">
-    <canvas id="chart1"></canvas>
-  </section>
 
-</main>
+  <div class="column bills">
+    <section class="chart2">
+      <canvas id="chart2"></canvas>
+    </section>
+  </div>
 
-<section class="chart2">
-  <canvas id="chart2"></canvas>
+
 </section>
+
+
+  <div class="top-right">
+    {{!-- <div>
+      <a href="/login">
+        <button
+          id="logout"
+          class="login-btn fa-solid fa-user"
+          role="button"
+        >Logout</button>
+      </a>
+    </div> --}}
+  </div>
 
 <script src="/javascript/budget-page.js"></script>
 <script src="/javascript/add-budget-row.js"></script>
