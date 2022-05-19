@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 });
 
 // Get a row from expenses
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
     Expenses.findOne({
         where: {
             id: req.params.id
