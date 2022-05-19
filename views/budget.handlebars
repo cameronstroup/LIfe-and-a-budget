@@ -17,84 +17,87 @@
 
 <header class="columns bills">
   <div class="column">
-  <h1 class="title has-text-centered">
-    Monthly Budget
-  </h1>
+    <h1 class="title has-text-centered">
+      Monthly Budget
+    </h1>
   </div>
 </header>
 
 <section class="columns">
 
-  
   <div class="column is-three-fifths income">
     <div class="topTable">
-    <form>
-      <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-        <tr class="header">
-          <th>Income</th>
-          <th>Budget</th>
-          <th>Actual</th>
-          <th>Save</th>
-          <th>Delete</th>
-        </tr>
-        {{#each income}}
-          <tr>
-            {{!-- <form class="income-form" id="{{ id }}_income"> --}}
-            <td><input
-                class="input"
-                type="text"
-                value="{{title}}"
-                id="income-title_{{id}}"
-              /></td>
-            <td><input
-                class="input"
-                type="text"
-                value="{{Budget}}"
-                id="income-budget_{{id}}"
-              /></td>
-            <td><input
-                class="input"
-                type="text"
-                value="{{Actual}}"
-                id="income-actual_{{id}}"
-              /></td>
-            <td><button
-                class="save-income-btn button is-fullwidth is-success is-light"
-                id="{{id}}_income-save"
-              >Save</button></td>
-            {{! </form> }}
-            <td><button
-                class="delete-income-btn button is-fullwidth is-danger is-light"
-                id="{{id}}_delete-income"
-              >Delete</button></td>
+      <form>
+        <table
+          class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+        >
+          <tr class="header">
+            <th>Income</th>
+            <th>Budget</th>
+            <th>Actual</th>
+            <th>Save</th>
+            <th>Delete</th>
           </tr>
-        {{/each}}
-        <tr>
-          <td><input
-              class="input"
-              type="text"
-              placeholder="EX Income"
-              id="new-income-title"
-            /></td>
-          <td><input
-              class="input"
-              type="text"
-              placeholder="EX 300"
-              id="new-income-budget"
-            /></td>
-          <td><input
-              class="input"
-              type="text"
-              placeholder="EX 302.49"
-              id="new-income-actual"
-            /></td>
-        </tr>
-      </table>
-    </form>
-    <button class="button is-fullwidth is-primary is-light" id="new-income-btn">Add Row</button>
+          {{#each income}}
+            <tr>
+              {{!-- <form class="income-form" id="{{ id }}_income"> --}}
+              <td><input
+                  class="input"
+                  type="text"
+                  value="{{title}}"
+                  id="income-title_{{id}}"
+                /></td>
+              <td><input
+                  class="input"
+                  type="text"
+                  value="{{Budget}}"
+                  id="income-budget_{{id}}"
+                /></td>
+              <td><input
+                  class="input"
+                  type="text"
+                  value="{{Actual}}"
+                  id="income-actual_{{id}}"
+                /></td>
+              <td><button
+                  class="save-income-btn button is-fullwidth is-success is-light"
+                  id="{{id}}_income-save"
+                >Save</button></td>
+              {{! </form> }}
+              <td><button
+                  class="delete-income-btn button is-fullwidth is-danger is-light"
+                  id="{{id}}_delete-income"
+                >Delete</button></td>
+            </tr>
+          {{/each}}
+          <tr>
+            <td><input
+                class="input"
+                type="text"
+                placeholder="EX Income"
+                id="new-income-title"
+              /></td>
+            <td><input
+                class="input"
+                type="text"
+                placeholder="EX 300"
+                id="new-income-budget"
+              /></td>
+            <td><input
+                class="input"
+                type="text"
+                placeholder="EX 302.49"
+                id="new-income-actual"
+              /></td>
+          </tr>
+        </table>
+      </form>
+      <button
+        class="button is-fullwidth is-primary is-light"
+        id="new-income-btn"
+      >Add Row</button>
+    </div>
   </div>
-  </div>
-
 
   <div class="column">
     <div class="chartTop bills">
@@ -102,18 +105,17 @@
     </div>
   </div>
 
-
 </section>
 
-{{!-- ========================================================================================= --}}
-
+{{! ========================================================================================= }}
 
 <section class="columns">
 
-
   <div class="column is-three-fifths expenses">
     <form>
-      <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+      <table
+        class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+      >
         <tr class="header">
           <th>Bills</th>
           <th>Budget</th>
@@ -175,26 +177,27 @@
         </tr>
       </table>
     </form>
-    <button class="button is-fullwidth is-primary is-light" id="new-expenses-btn">Add Row</button>
+    <button
+      class="button is-fullwidth is-primary is-light"
+      id="new-expenses-btn"
+    >Add Row</button>
   </div>
-
 
   <div class="column bills">
     <canvas id="chart1"></canvas>
   </div>
 
-
 </section>
 
-{{!-- ================================================================================== --}}
-
+{{! ================================================================================== }}
 
 <section class="columns">
 
-
   <div class="column is-three-fifths savings">
     <form>
-      <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+      <table
+        class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+      >
         <tr class="header">
           <th>Savings</th>
           <th>Budget</th>
@@ -256,9 +259,11 @@
         </tr>
       </table>
     </form>
-    <button class="button is-fullwidth is-primary is-light" id="new-savings-btn">Add Row</button>
+    <button
+      class="button is-fullwidth is-primary is-light"
+      id="new-savings-btn"
+    >Add Row</button>
   </div>
-
 
   <div class="column bills">
     <section class="chart2">
@@ -266,12 +271,10 @@
     </section>
   </div>
 
-
 </section>
 
-
-  <div class="top-right">
-    {{!-- <div>
+<div class="top-right">
+  {{! <div>
       <a href="/login">
         <button
           id="logout"
@@ -279,8 +282,8 @@
           role="button"
         >Logout</button>
       </a>
-    </div> --}}
-  </div>
+    </div> }}
+</div>
 
 <script src="/javascript/budget-page.js"></script>
 <script src="/javascript/add-budget-row.js"></script>
