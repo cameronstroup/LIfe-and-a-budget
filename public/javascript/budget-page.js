@@ -1,16 +1,7 @@
 const chart1 = document.getElementById('chart1').getContext('2d');
 const chartTop = document.getElementById('topChart').getContext('2d');
 const chart2 = document.getElementById('chart2').getContext('2d');
-const incomeName = document.querySelectorAll('.name')
 
-let nameValues = []
-
-
-
-//Global options
-// Chart.defaults.global.defaultFontFamily = 'Lato';
-// Chart.defaults.global.defaultFontSize = 18;
-// Chart.defaults.global.defaultFontColor = 'grey';
 async function pieChart() {
 
     let titleArray = [];
@@ -23,8 +14,6 @@ async function pieChart() {
         titleArray.push(data.title)
         spendingArray.push(data.Actual)
     });
-    console.log(titleArray)
-    console.log(spendingArray)
 
     let massPopChart = new Chart(chart1, {
 
@@ -34,7 +23,6 @@ async function pieChart() {
             datasets:[{
                 label:'',
                 data: spendingArray,
-                //backgroundColor:'green'
                 backgroundColor:[
                     'green',
                     'red',
@@ -60,12 +48,6 @@ async function pieChart() {
 pieChart();
 
 
-
-
-//Global options
-// Chart.defaults.global.defaultFontFamily = 'Lato';
-// Chart.defaults.global.defaultFontSize = 18;
-// Chart.defaults.global.defaultFontColor = 'grey';
 
 let budgetActualBar = new Chart(chartTop, {
     type: 'bar',
