@@ -94,6 +94,13 @@ incomeBarChart();
 
 async function savingsChart() {
 
+    let budgetTotal = 0;
+    let savingsTotal = 0;
+
+    let savingsResponse = await fetch('/api/savings/');
+    let savingsData = await savingsResponse.json();
+    console.log(savingsData)
+
    // fetch data from savings api (/api/savings/)
    // json the response
    // map the response from the savings api 
