@@ -49,8 +49,6 @@ pieChart();
 
 async function incomeBarChart() {
 
-    // let budget = [];
-    // let income = [];
     let budgetTotal = 0;
     let incomeTotal = 0;
 
@@ -59,22 +57,9 @@ async function incomeBarChart() {
 
 
     incomeBarChartData.map((data) => {
-        // budget.push(data.Budget);
-        // income.push(data.Actual);
         budgetTotal += data.Budget
         incomeTotal += JSON.parse(data.Actual)
     });
-
-
-    // for (let count = 0; count < budget.length; count++) {
-    //     // budgetTotal = budget[count] + budgetTotal 
-    //     budgetTotal += budget[count];
-    // }
-
-    // for (let count = 0; count < income.length; count++) {
-    //     // incomeTotal = JSON.parse(income[count]) + incomeTotal
-    //     incomeTotal += JSON.parse(income[count]);
-    // }
 
     let budgetActualBar = new Chart(chartTop, {
         type: 'bar',
@@ -106,11 +91,6 @@ async function incomeBarChart() {
 }
 incomeBarChart();
 
-
-//Global options
-// Chart.defaults.global.defaultFontFamily = 'Lato';
-// Chart.defaults.global.defaultFontSize = 18;
-// Chart.defaults.global.defaultFontColor = 'grey';
 
 let chartHorizontalBar = new Chart(chart2, {
 type: 'bar',
