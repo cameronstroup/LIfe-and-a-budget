@@ -96,16 +96,16 @@ async function savingsChart() {
 
     let budget = [];
     let savings = [];
+    let title = [];
 
     let savingsResponse = await fetch('/api/savings/');
     let savingsData = await savingsResponse.json();
 
     savingsData.map((data) => {
+        title.push(data.title);
         budget.push(data.Budget);
         savings.push(JSON.parse(data.Actual));
     })
-    console.log(budget)
-    console.log(savings)
 
    // fetch data from savings api (/api/savings/)
    // json the response
@@ -114,38 +114,32 @@ async function savingsChart() {
    // set those values to their own variables
    // create chart 
 
-// let chartHorizontalBar = new Chart(chart2, {
-// type: 'line',
-// data:{
-//     labels:['Budget', 'Actual'],
-//     datasets:[{
-//         label:'',
-//         data:[
-//             20000,
-//             25000,
-//         ],
-//         //backgroundColor:'green'
-//         backgroundColor:[
-//         'green',
-//         'red',
-//         'orange',
-//         'purple',
-//         'blue',
-//         'pink' 
-//         ],
-//         borderWidth:4,
-//         borderColor:'black',
-//         hoverBorderWidth:'7',
-//         hoverBorderColor:'yellow'
-//     }]
-// },
-// options:{
-//     title:{
-//         display: true,
-//         text: 'largest cities'
-//     },
-//     indexAxis: 'y'
-// }
-// });
+    let chartHorizontalBar = new Chart(chart2, {
+    type: 'radar',
+    data:{
+        labels: title,
+        datasets:[{
+            label:'Savings Budget',
+            data: budget,
+            backgroundColor: 'rgba(0,128,0, 0.2)',
+            borderWidth:4,
+            borderColor:'rgb(0,128,0)',
+            hoverBorderWidth:'7',
+            hoverBorderColor:'yellow'
+        },
+        {
+            label:'Savings Actual',
+            data: savings,
+            backgroundColor: 'rgba(255, 0, 0, 0.2)',
+            borderWidth:4,
+            borderColor:'rgb(255, 0, 0)',
+            hoverBorderWidth:'7',
+            hoverBorderColor:'yellow'
+        }]
+    },
+    options:{
+        indexAxis: 'y'
+    }
+    });
 }
 savingsChart();
