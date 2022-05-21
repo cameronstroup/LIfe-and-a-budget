@@ -7,7 +7,7 @@ async function pieChart() {
     let titleArray = [];
     let spendingArray = [];
 
-    let pieChartDataArray = await fetch('/api/income/')
+    let pieChartDataArray = await fetch('/api/expenses/')
     let pieChartData = await pieChartDataArray.json();
 
     pieChartData.map((data) => {
@@ -47,40 +47,43 @@ async function pieChart() {
 }
 pieChart();
 
+async function incomeBarChart() {
 
 
-let budgetActualBar = new Chart(chartTop, {
-    type: 'bar',
-    data:{
-        labels:['Budget', 'Actual'],
-        datasets:[{
-            label:'',
-            data:[
-                20000,
-                25000,
-            ],
-            //backgroundColor:'green'
-            backgroundColor:[
-            'green',
-            'red',
-            'orange',
-            'purple',
-            'blue',
-            'pink' 
-            ],
-            borderWidth:4,
-            borderColor:'black',
-            hoverBorderWidth:'7',
-            hoverBorderColor:'yellow'
-        }]
-    },
-    options:{
-        title:{
-            display: true,
-            text: 'largest cities'
-        }
-    }
-});
+
+// let budgetActualBar = new Chart(chartTop, {
+//     type: 'bar',
+//     data:{
+//         labels:['Budget', 'Actual'],
+//         datasets:[{
+//             label:'',
+//             data:[
+//                 20000,
+//                 25000,
+//             ],
+//             //backgroundColor:'green'
+//             backgroundColor:[
+//             'green',
+//             'red',
+//             'orange',
+//             'purple',
+//             'blue',
+//             'pink' 
+//             ],
+//             borderWidth:4,
+//             borderColor:'black',
+//             hoverBorderWidth:'7',
+//             hoverBorderColor:'yellow'
+//         }]
+//     },
+//     options:{
+//         title:{
+//             display: true,
+//             text: 'largest cities'
+//         }
+//     }
+// });
+}
 
 
 //Global options
