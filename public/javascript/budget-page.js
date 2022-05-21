@@ -26,39 +26,36 @@ async function pieChart() {
     console.log(titleArray)
     console.log(spendingArray)
 
-// let massPopChart = new Chart(chart1, {
+    let massPopChart = new Chart(chart1, {
 
-//     type: 'pie',
-//     data:{
-//         labels: nameValues,
-//         datasets:[{
-//             label:'',
-//             data:[
-//                 20000,
-//                 25000,
-//             ],
-//             //backgroundColor:'green'
-//             backgroundColor:[
-//                 'green',
-//                 'red',
-//                 'orange',
-//                 'purple',
-//                 'blue',
-//                 'pink' 
-//             ],
-//             borderWidth:4,
-//             borderColor:'black',
-//             hoverBorderWidth:'7',
-//             hoverBorderColor:'yellow'
-//         }]
-//     },
-//     options:{
-//         title:{
-//             display: true,
-//             text: 'largest cities'
-//         }
-//     }
-// });
+        type: 'pie',
+        data:{
+            labels: titleArray,
+            datasets:[{
+                label:'',
+                data: spendingArray,
+                //backgroundColor:'green'
+                backgroundColor:[
+                    'green',
+                    'red',
+                    'orange',
+                    'purple',
+                    'blue',
+                    'pink' 
+                ],
+                borderWidth:4,
+                borderColor:'black',
+                hoverBorderWidth:'7',
+                hoverBorderColor:'yellow'
+            }]
+        },
+        options:{
+            title:{
+                display: true,
+                text: 'largest cities'
+            }
+        }
+    });
 }
 pieChart();
 
