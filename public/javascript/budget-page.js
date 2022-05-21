@@ -64,45 +64,42 @@ async function incomeBarChart() {
 
 
     for (let count = 0; count < budget.length; count++) {
-        budgetTotal = budget[count] + budgetTotal 
+        // budgetTotal = budget[count] + budgetTotal 
+        budgetTotal += budget[count];
     }
 
     for (let count = 0; count < income.length; count++) {
-        incomeTotal = JSON.parse(income[count]) + incomeTotal
+        // incomeTotal = JSON.parse(income[count]) + incomeTotal
+        incomeTotal += JSON.parse(income[count]);
     }
 
-// let budgetActualBar = new Chart(chartTop, {
-//     type: 'bar',
-//     data:{
-//         labels:['Budget', 'Actual'],
-//         datasets:[{
-//             label:'',
-//             data:[
-//                 20000,
-//                 25000,
-//             ],
-//             //backgroundColor:'green'
-//             backgroundColor:[
-//             'green',
-//             'red',
-//             'orange',
-//             'purple',
-//             'blue',
-//             'pink' 
-//             ],
-//             borderWidth:4,
-//             borderColor:'black',
-//             hoverBorderWidth:'7',
-//             hoverBorderColor:'yellow'
-//         }]
-//     },
-//     options:{
-//         title:{
-//             display: true,
-//             text: 'largest cities'
-//         }
-//     }
-// });
+    let budgetActualBar = new Chart(chartTop, {
+        type: 'bar',
+        data:{
+            labels:['Budget', 'Actual'],
+            datasets:[{
+                label:'',
+                data:[
+                    budgetTotal,
+                    incomeTotal,
+                ],
+                backgroundColor:[
+                'green',
+                'red'
+                ],
+                borderWidth:4,
+                borderColor:'black',
+                hoverBorderWidth:'7',
+                hoverBorderColor:'yellow'
+            }]
+        },
+        options:{
+            title:{
+                display: true,
+                text: 'largest cities'
+            }
+        }
+    });
 }
 incomeBarChart();
 
