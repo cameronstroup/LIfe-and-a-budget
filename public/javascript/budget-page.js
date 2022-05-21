@@ -49,9 +49,27 @@ pieChart();
 
 async function incomeBarChart() {
 
-    let incomeBarChartResponse = await fetch('/api/income/')
+    let budget = [];
+    let income = [];
+    let budgetTotal = 0;
+    let incomeTotal = 0;
+
+    let incomeBarChartResponse = await fetch('/api/income/');
     let incomeBarChartData = await incomeBarChartResponse.json();
-    // console.log(incomeBarChartData)
+
+    incomeBarChartData.map((data) => {
+        budget.push(data.Budget);
+        income.push(data.Actual);
+    });
+
+
+    for (let count = 0; count < budget.length; count++) {
+        budgetTotal = budget[count] + budgetTotal 
+    }
+
+    for (let count = 0; count < income.length; count++) {
+        incomeTotal = JSON.parse(income[count]) + incomeTotal
+    }
 
 // let budgetActualBar = new Chart(chartTop, {
 //     type: 'bar',
