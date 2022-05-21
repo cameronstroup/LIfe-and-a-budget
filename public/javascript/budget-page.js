@@ -92,36 +92,42 @@ async function incomeBarChart() {
 incomeBarChart();
 
 
-let chartHorizontalBar = new Chart(chart2, {
-type: 'bar',
-data:{
-    labels:['Budget', 'Actual'],
-    datasets:[{
-        label:'',
-        data:[
-            20000,
-            25000,
-        ],
-        //backgroundColor:'green'
-        backgroundColor:[
-        'green',
-        'red',
-        'orange',
-        'purple',
-        'blue',
-        'pink' 
-        ],
-        borderWidth:4,
-        borderColor:'black',
-        hoverBorderWidth:'7',
-        hoverBorderColor:'yellow'
-    }]
-},
-options:{
-    title:{
-        display: true,
-        text: 'largest cities'
-    },
-    indexAxis: 'y'
+async function savingsChart() {
+
+    
+
+// let chartHorizontalBar = new Chart(chart2, {
+// type: 'line',
+// data:{
+//     labels:['Budget', 'Actual'],
+//     datasets:[{
+//         label:'',
+//         data:[
+//             20000,
+//             25000,
+//         ],
+//         //backgroundColor:'green'
+//         backgroundColor:[
+//         'green',
+//         'red',
+//         'orange',
+//         'purple',
+//         'blue',
+//         'pink' 
+//         ],
+//         borderWidth:4,
+//         borderColor:'black',
+//         hoverBorderWidth:'7',
+//         hoverBorderColor:'yellow'
+//     }]
+// },
+// options:{
+//     title:{
+//         display: true,
+//         text: 'largest cities'
+//     },
+//     indexAxis: 'y'
+// }
+// });
 }
-});
+savingsChart();
