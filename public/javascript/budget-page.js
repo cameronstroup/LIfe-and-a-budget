@@ -49,7 +49,9 @@ pieChart();
 
 async function incomeBarChart() {
 
-
+    let incomeBarChartResponse = await fetch('/api/income/')
+    let incomeBarChartData = await incomeBarChartResponse.json();
+    // console.log(incomeBarChartData)
 
 // let budgetActualBar = new Chart(chartTop, {
 //     type: 'bar',
@@ -84,6 +86,7 @@ async function incomeBarChart() {
 //     }
 // });
 }
+incomeBarChart();
 
 
 //Global options
