@@ -94,7 +94,12 @@ incomeBarChart();
 
 async function savingsChart() {
 
-    
+   // fetch data from savings api (/api/savings/)
+   // json the response
+   // map the response from the savings api 
+   // seperate values from the mapped response
+   // set those values to their own variables
+   // create chart 
 
 // let chartHorizontalBar = new Chart(chart2, {
 // type: 'line',
