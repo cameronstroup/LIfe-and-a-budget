@@ -13,12 +13,18 @@ let nameValues = []
 // Chart.defaults.global.defaultFontColor = 'grey';
 async function pieChart() {
 
+    let titleArray = [];
+    let spendingArray = [];
+
     let pieChartDataArray = await fetch('/api/income/')
     let pieChartData = await pieChartDataArray.json();
 
     pieChartData.map((data) => {
-        console.log(data)
-    })
+        titleArray.push(data.title)
+        spendingArray.push(data.Actual)
+    });
+    console.log(titleArray)
+    console.log(spendingArray)
 
 // let massPopChart = new Chart(chart1, {
 
