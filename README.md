@@ -34,7 +34,7 @@
   [Will Stock](https://github.com/Wist118)  
 
   ## Webpage
-    Use this link to go to the live site (https://intense-forest-14268.herokuapp.com/)
+    Use this link to go to the live site https://intense-forest-14268.herokuapp.com/
   
     
   ## ContactMe
