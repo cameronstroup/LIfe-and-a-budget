@@ -29,7 +29,8 @@ async function pieChart() {
                     'orange',
                     'purple',
                     'blue',
-                    'pink' 
+                    'pink',
+                    'grey' 
                 ],
                 borderWidth:4,
                 borderColor:'black',
@@ -136,3 +137,6 @@ async function savingsChart() {
     });
 }
 savingsChart();
+
+
+
