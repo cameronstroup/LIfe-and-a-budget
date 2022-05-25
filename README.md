@@ -24,8 +24,8 @@ The user can either visit the live application posted above, or clone the code t
 After turning on the server with 'npm start' the user can then use their browser and type 'http://localhost:3002/' to be taken to the homepage of the application. The user will then have to create an account and/or login to see the budget page. They then can add/update/delete any rows from any of the three tables (Income, Expenses, or Savings).
 
 
-### Homepage
-![Homepage](./assets/images/home-page.png?raw=true "Homepage Screenshot")
+### Homepage![image](https://user-images.githubusercontent.com/90347622/170349529-b2bc9b01-3e9d-48cb-b3f3-91634e1fe01a.png)
+![Uploading image.png…]()
 Screenshot of the homepage
 
 ### Login Page
