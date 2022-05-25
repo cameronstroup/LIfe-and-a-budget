@@ -29,20 +29,20 @@ After turning on the server with 'npm start' the user can then use their browser
 Screenshot of the homepage
 
 ### Login Page
-![image](https://user-images.githubusercontent.com/90347622/170349137-b701b4e2-14c7-4f35-86c0-8f3d1fd045e9.png)
+![image](https://user-images.githubusercontent.com/90347622/170349290-1c3c46d6-1759-485e-8ff4-5b3527f3029d.png)
 Screenshot of the Sign-Up Page
 
-![Login](./assets/images/login.png?raw=true "Login Screenshot")
+![image](https://user-images.githubusercontent.com/90347622/170349346-9b5ac9e9-f0f8-463b-8d63-da5a4cc032c3.png)
 Screenshot of the Login Page
 
 ### Budget Page
-![Budget 1](./assets/images/budget-page-1.png?raw=true "Screenshot of budget page")
+![image](https://user-images.githubusercontent.com/90347622/170349367-874aa25d-e0a4-4fdb-8f6b-f2de6dffe32f.png)
 Screenshot of the Budget Page (1)
 
-![Budget 2](./assets/images/budget-page-2.png?raw=true "Screenshot of budget page")
+![image](https://user-images.githubusercontent.com/90347622/170349398-0df29b24-c76c-4400-8c63-6a0dacc09636.png)
 Screenshot of the Budget Page (2)
 
-![Budget 3](./assets/images/budget-page-3.png?raw=true "Screenshot of budget page")
+![image](https://user-images.githubusercontent.com/90347622/170349424-953ced77-70a3-4a55-8848-c05273f26241.png)
 Screenshot of Budget Page (3)
 
 ## Credits
