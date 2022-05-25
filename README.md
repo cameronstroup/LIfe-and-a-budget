@@ -29,7 +29,7 @@ After turning on the server with 'npm start' the user can then use their browser
 Screenshot of the homepage
 
 ### Login Page
-![Sign Up](./assets/images/sign-up.png?raw=true "Sign-up Screenshot")
+![image](https://user-images.githubusercontent.com/90347622/170349137-b701b4e2-14c7-4f35-86c0-8f3d1fd045e9.png)
 Screenshot of the Sign-Up Page
 
 ![Login](./assets/images/login.png?raw=true "Login Screenshot")
